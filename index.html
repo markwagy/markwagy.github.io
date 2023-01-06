@@ -1,9 +1,64 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Website</title>
-   </head>
-   <body>
-      <h1>hi</h1>
-   </body>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <title>CSS Grid 3</title>
+    <style>
+        .container1 {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 33.3% 33.3% auto;
+            grid-template-areas: "header header header" ". intro intro";
+          }
+
+          .header {
+            grid-area: header
+          }
+
+          .intro {
+            grid-area: intro
+          }
+
+          .footer {
+            grid-area: footer;
+            background-color: #000;
+            color: #999;
+            text-align: center;
+            padding: 50px 20px 100px;
+          }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="container1">
+        <div class="header">
+            <div id="heading">
+                <h2>Mark Wagy</h2>
+            </div>
+        </div>
+        <div class="intro">
+            <p>Welcome. Please contact me with any questions or requests. </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Mark Wagy</p>
+    </div>
+</body>
+
 </html>
