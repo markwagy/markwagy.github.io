@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid 3</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 200px auto 100px;
+            grid-template-columns: 33% auto;
+            grid-template-areas: "header header" "sidebar content" "footer footer";
+        }
+        
+        .container > div {
+            padding: 10px;
+            margin: 10px;
+            background-color: rgb(220, 220, 220);
+        }
+        
+        .header {
+            grid-area: header;
+        }
+        
+        .sidebar {
+            grid-area: sidebar;
+        }
+        
+        .footer {
+            grid-area: footer;
+        }
+        
+        .content {
+            grid-area: content;
+        }
+        
+        @media screen and (max-width: 699px) {
+            .container {
+                display: grid;
+                grid-template-rows: 200px auto;
+                grid-template-columns: 100%;
+                grid-template-areas: "header" "sidebar" "content" "footer";
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
